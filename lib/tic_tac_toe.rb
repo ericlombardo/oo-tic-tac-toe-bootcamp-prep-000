@@ -57,7 +57,10 @@ class TicTacToe
     user_input = gets.chomp
     user_index = input_to_index(user_input)
     if valid_move?(position) == true
-      @board[position] = current_player
+      move(position, current_player)
+      display_board
+    else
+      turn(position)
     end
   end
   # asks user for move between 1 - 9
