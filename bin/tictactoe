@@ -2,6 +2,5 @@
 require 'pry'
 require_relative '../lib/tic_tac_toe.rb'
 
-# calls an instance of TicTacToe
-game_1 = TicTacToe.new
+game_1 = TicTacToe.new      # calls an instance of TicTacToe
 # calls the #play for TicTacToe
