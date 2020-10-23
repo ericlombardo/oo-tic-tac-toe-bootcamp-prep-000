@@ -33,25 +33,25 @@ class TicTacToe
     index = input.to_i - 1
   end
 
-  
+
   def move(index, tolken = "X")     # creates #move that takes index in the @board array and players tolken (default is "X")
     # logs move
     @board[index] = tolken
   end
 
-  
+
   def position_taken?(index)      # creates #position_taken?
   # if position has "X" or "O" => true : false
   @board[index] == "X" || @board[index] == "O" ? true : false
   end
 
-  
+
   def valid_move?(position)     # creates #valid_move? and takes a position
     # if position is not taken and between 0 - 8 ? true : false
     position_taken?(position) == false && position.between?(0, 8) ? true : false
   end
 
-  
+
   def turn      # creates #turn to include protical for one full move
     puts "Please enter spot 1-9"             # asks user for move between 1 - 9
     user_input = gets.chomp                  # Receives input
@@ -64,7 +64,7 @@ class TicTacToe
     end
   end
 
-  
+
   def turn_count      # creates #turn_count
     # sets counter
     count = 0
@@ -80,13 +80,13 @@ class TicTacToe
 
   end
 
-  
+
   def current_player      # creats current_player method
     # uses turn_count to see if "X" or "O" turn
     turn_count % 2 == 0 ? "X" : "O"
   end
 
-  
+
   def won?      # creates #won?
     WIN_COMBINATIONS.any? do | combo |      # loops through WIN_COMBINATIONS array
       position_1 = @board[combo[0]]     # assigns each array to a position variable
@@ -99,14 +99,14 @@ class TicTacToe
     end
   end
 
-  
+
   def full?     # creates #full?
     @board.all? do | spot |     # check if all on board are "X" or "O"
       spot == "X" || spot == "O"
     end
   end
 
-  
+
   def draw?     # creates #draw?
     full? == true && won? == false      # checks if board is full and no winning combo has occured
   end
