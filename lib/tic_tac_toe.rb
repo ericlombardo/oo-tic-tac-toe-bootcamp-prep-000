@@ -105,7 +105,9 @@ class TicTacToe     # creates class for TicTacToe
   end
 
   def winner
-    win? != false
+    if win? != false    # checks if win has occured
+      winner_winner = won?      # create variable to hold winning array
+      return winner_winner[0]     #return what is in one of the arrays
   end# creates #winner
 
   # => "X" or "O" if there is a winner
