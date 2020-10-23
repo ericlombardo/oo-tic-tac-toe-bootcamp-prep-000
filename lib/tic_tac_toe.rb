@@ -52,10 +52,13 @@ class TicTacToe
   end
 
   # creates #turn to include protical for one full move
-  def turn
+  def turn(position)
     puts "Please enter spot 1-9"
     user_input = gets.chomp
     user_index = input_to_index(user_input)
+    if valid_move?(position) == true
+      @board[position] = current_player
+    end
   end
   # asks user for move between 1 - 9
   # Receives input
