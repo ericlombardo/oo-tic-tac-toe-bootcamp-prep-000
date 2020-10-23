@@ -110,7 +110,7 @@ class TicTacToe
   def draw?
     full? == true && won? == false      # checks if board is full and no winning combo has occured
   end
-  
+
   # creates #over?
   def over?
     draw? == true || won? != false
