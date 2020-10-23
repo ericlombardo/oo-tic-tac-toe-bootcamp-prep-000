@@ -56,10 +56,10 @@ class TicTacToe
     puts "Please enter spot 1-9"             # asks user for move between 1 - 9
     user_input = gets.chomp                  # Receives input
     user_index = input_to_index(user_input)  # Translate input into index value
-    if valid_move?(user_index) == true       # If move valid, make move, display board 
+    if valid_move?(user_index) == true       # If move valid, make move, display board
       move(user_index, current_player)
       display_board
-    else                                     # if move invalid ? run turn again until valid_move 
+    else                                     # if move invalid ? run turn again until valid_move
       turn
     end
   end
@@ -94,7 +94,7 @@ class TicTacToe
 
   # creates #draw?
   def draw?
-    
+
   end
   # board == full && win == false ? true : false
 
