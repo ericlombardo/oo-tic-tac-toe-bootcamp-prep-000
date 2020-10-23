@@ -111,13 +111,14 @@ class TicTacToe     # creates class for TicTacToe
     end
   end
 
-  # => "X" or "O" if there is a winner
 
-  # creates #play (the main function)
-  # until game is over
-  # take turns
-  # if game is won
+  def play      # creates #play (the main function)
+  until over? == true     # until game is over
+    turn      # take turns
+  end
+  won? != false# if game is won
   # congrats winner
   # else if draw
   # tell player ended in draw
+  end
 end
