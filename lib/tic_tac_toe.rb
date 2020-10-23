@@ -87,15 +87,17 @@ class TicTacToe
   end
 
   # creates #won?
-  WIN_COMBINATIONS.all? do | combo |
-    position_1 = @board[combo[0]]
-    position_2 = @board[combo[1]]
-    position_3 = @board[combo[2]]
+  def won?
+    WIN_COMBINATIONS.all? do | combo |
+      position_1 = @board[combo[0]]
+      position_2 = @board[combo[1]]
+      position_3 = @board[combo[2]]
 
-    if position_1 == "X" && position_2 == "X" && position_3 == "X" || position_1 == "O" && position_2 == "O" && position_3 == "O"
-      combo
-    else
-      false
+      if position_1 == "X" && position_2 == "X" && position_3 == "X" || position_1 == "O" && position_2 == "O" && position_3 == "O"
+        combo
+      else
+        false
+      end
     end
   end
   # winning combo present ? winning combo array : false
