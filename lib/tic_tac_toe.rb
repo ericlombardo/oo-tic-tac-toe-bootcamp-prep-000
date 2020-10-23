@@ -108,11 +108,13 @@ class TicTacToe
 
   # creates #draw?
   def draw?
-    full? == true && won? == false
+    full? == true && won? == false      # checks if board is full and no winning combo has occured
   end
-  # board == full && win == false ? true : false
-
+  
   # creates #over?
+  def over?
+    draw? == true || won? != false
+  end
   # draw || won ? true : false
 
   # creates #winner
