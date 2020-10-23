@@ -94,7 +94,7 @@ class TicTacToe
       position_3 = @board[combo[2]]
 
       if position_1 == "X" && position_2 == "X" && position_3 == "X" || position_1 == "O" && position_2 == "O" && position_3 == "O"
-        return combo.to_a
+        return combo
       end
     end
   end
