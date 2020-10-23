@@ -113,14 +113,14 @@ class TicTacToe     # creates class for TicTacToe
 
 
   def play      # creates #play (the main function)
-  until over? == true     # until game is over
-    turn      # take turns
-  end
-  if won? != false
-    puts "Congratulations #{winner}!"
-  elsif draw? == true
-    puts "Cat's Game!"
-  end      # if game is won
+    until over? == true     # until game is over
+      turn      # take turns
+    end
+    if won? != false
+      puts "Congratulations #{winner}!"
+    elsif draw? == true
+      puts "Cat's Game!"
+    end      # if game is won
   # congrats winner
   # else if draw
   # tell player ended in draw
