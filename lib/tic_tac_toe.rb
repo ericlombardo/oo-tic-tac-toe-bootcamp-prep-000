@@ -116,9 +116,9 @@ class TicTacToe     # creates class for TicTacToe
     until over? == true     # until game is over
       turn      # take turns
     end
-    if won? != false
+    if won? != false      # if there is a win congratulates winner
       puts "Congratulations #{winner}!"
-    elsif draw? == true
+    elsif draw? == true     # if draw => alerts it is a cat's game
       puts "Cat's Game!"
     end      # if game is won
   end
