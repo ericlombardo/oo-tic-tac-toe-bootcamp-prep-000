@@ -88,7 +88,7 @@ class TicTacToe
 
   # creates #won?
   def won?
-    WIN_COMBINATIONS.all? do | combo |
+    WIN_COMBINATIONS.any? do | combo |
       position_1 = @board[combo[0]]
       position_2 = @board[combo[1]]
       position_3 = @board[combo[2]]
