@@ -105,11 +105,10 @@ class TicTacToe
       spot == "X" || spot == "O"
     end
   end
-  # checks to see if all in @board are "X" or "O"
 
   # creates #draw?
   def draw?
-
+    full? == true && won? != false
   end
   # board == full && win == false ? true : false
 
