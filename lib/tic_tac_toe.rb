@@ -33,26 +33,26 @@ class TicTacToe
     index = input.to_i - 1
   end
 
-  # creates #move that takes index in the @board array and players tolken (default is "X")
-  def move(index, tolken = "X")
+  
+  def move(index, tolken = "X")     # creates #move that takes index in the @board array and players tolken (default is "X")
     # logs move
     @board[index] = tolken
   end
 
-  # creates #position_taken?
-  def position_taken?(index)
+  
+  def position_taken?(index)      # creates #position_taken?
   # if position has "X" or "O" => true : false
   @board[index] == "X" || @board[index] == "O" ? true : false
   end
 
-  # creates #valid_move? and takes a position
-  def valid_move?(position)
+  
+  def valid_move?(position)     # creates #valid_move? and takes a position
     # if position is not taken and between 0 - 8 ? true : false
     position_taken?(position) == false && position.between?(0, 8) ? true : false
   end
 
-  # creates #turn to include protical for one full move
-  def turn
+  
+  def turn      # creates #turn to include protical for one full move
     puts "Please enter spot 1-9"             # asks user for move between 1 - 9
     user_input = gets.chomp                  # Receives input
     user_index = input_to_index(user_input)  # Translate input into index value
@@ -64,8 +64,8 @@ class TicTacToe
     end
   end
 
-  # creates #turn_count
-  def turn_count
+  
+  def turn_count      # creates #turn_count
     # sets counter
     count = 0
     # loops through each element in @board array
@@ -80,14 +80,14 @@ class TicTacToe
 
   end
 
-  # creats current_player
-  def current_player
+  
+  def current_player      # creats current_player method
     # uses turn_count to see if "X" or "O" turn
     turn_count % 2 == 0 ? "X" : "O"
   end
 
-  # creates #won?
-  def won?
+  
+  def won?      # creates #won?
     WIN_COMBINATIONS.any? do | combo |      # loops through WIN_COMBINATIONS array
       position_1 = @board[combo[0]]     # assigns each array to a position variable
       position_2 = @board[combo[1]]
@@ -99,23 +99,22 @@ class TicTacToe
     end
   end
 
-  # creates #full?
-  def full?
+  
+  def full?     # creates #full?
     @board.all? do | spot |     # check if all on board are "X" or "O"
       spot == "X" || spot == "O"
     end
   end
 
-  # creates #draw?
-  def draw?
+  
+  def draw?     # creates #draw?
     full? == true && won? == false      # checks if board is full and no winning combo has occured
   end
 
-  # creates #over?
-  def over?
-    draw? == true || won? != false
+
+  def over?     # creates #over?
+    draw? == true || won? != false      # checks if there was a win or draw
   end
-  # draw || won ? true : false
 
   # creates #winner
   # => "X" or "O" if there is a winner
