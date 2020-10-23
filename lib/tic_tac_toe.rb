@@ -101,7 +101,7 @@ class TicTacToe
 
   # creates #full?
   def full?
-    @board.all? do | spot |
+    @board.all? do | spot |     # check if all on board are "X" or "O"
       spot == "X" || spot == "O"
     end
   end
