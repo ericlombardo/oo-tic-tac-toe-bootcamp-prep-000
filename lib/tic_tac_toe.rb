@@ -101,7 +101,7 @@ class TicTacToe
 
   # creates #full?
   def full?
-    @board.any? != " " ? true : false
+    @board.all? != " " ? true : false
   end
   # checks to see if all in @board are "X" or "O"
 
