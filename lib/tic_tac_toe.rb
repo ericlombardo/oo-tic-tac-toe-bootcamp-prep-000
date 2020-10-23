@@ -120,6 +120,6 @@ class TicTacToe     # creates class for TicTacToe
       puts "Congratulations #{winner}!"
     elsif draw? == true     # if draw => alerts it is a cat's game
       puts "Cat's Game!"
-    end      # if game is won
+    end    
   end
 end
