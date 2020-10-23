@@ -88,19 +88,21 @@ class TicTacToe
 
   # creates #won?
   def won?
-    WIN_COMBINATIONS.any? do | combo |
-      position_1 = @board[combo[0]]
+    WIN_COMBINATIONS.any? do | combo |      # loops through WIN_COMBINATIONS array
+      position_1 = @board[combo[0]]     # assigns each array to a position variable
       position_2 = @board[combo[1]]
       position_3 = @board[combo[2]]
 
-      if position_1 == "X" && position_2 == "X" && position_3 == "X" || position_1 == "O" && position_2 == "O" && position_3 == "O"
-        return combo
+      if position_1 == "X" && position_2 == "X" && position_3 == "X" || position_1 == "O" && position_2 == "O" && position_3 == "O"     # check if all are "X" or "O"
+        return combo      # if so => wining combo
       end
     end
   end
-  # winning combo present ? winning combo array : false
 
   # creates #full?
+  def full?
+    @board.any? != " " ? true : false
+  end
   # checks to see if all in @board are "X" or "O"
 
   # creates #draw?
