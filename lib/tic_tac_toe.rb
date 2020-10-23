@@ -108,7 +108,7 @@ class TicTacToe
 
   # creates #draw?
   def draw?
-    full? == true && won? != false
+    full? == true && won? == false
   end
   # board == full && win == false ? true : false
 
