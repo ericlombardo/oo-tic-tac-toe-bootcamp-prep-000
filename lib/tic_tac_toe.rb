@@ -1,13 +1,10 @@
-# creates class for TicTacToe
-class TicTacToe
-  # creates #initialize
-  def initialize
-    # assigns new empty array @board variable
-    @board = Array.new(9, " ")
+class TicTacToe     # creates class for TicTacToe
+  def initialize      # creates #initialize
+    @board = Array.new(9, " ")      # assigns new empty array @board variable
   end
 
-  # creates a constand WIN_COMBINATIONS and assigns array of winning combinations
-  WIN_COMBINATIONS = [
+  
+  WIN_COMBINATIONS = [      # creates a constand WIN_COMBINATIONS and assigns array of winning combinations
     [0, 1, 2],
     [3, 4, 5],
     [6, 7, 8],
@@ -18,8 +15,8 @@ class TicTacToe
     [2, 4, 6]
   ]
 
-  # creates #display_board and prints current board based on @board array
-  def display_board
+  
+  def display_board     # creates #display_board and prints current board based on @board array
     puts " #{@board[0]} | #{@board[1]} | #{@board[2]} "
     puts "-----------"
     puts " #{@board[3]} | #{@board[4]} | #{@board[5]} "
@@ -27,28 +24,24 @@ class TicTacToe
     puts " #{@board[6]} | #{@board[7]} | #{@board[8]} "
   end
 
-  # creates #input_to_index that takes user input
-  def input_to_index(input)
-    # changes string to integer and subtracts 1 to make zero indexed
-    index = input.to_i - 1
+  
+  def input_to_index(input)     # creates #input_to_index that takes user input
+    index = input.to_i - 1      # changes string to integer and subtracts 1 to make zero indexed
   end
 
 
   def move(index, tolken = "X")     # creates #move that takes index in the @board array and players tolken (default is "X")
-    # logs move
-    @board[index] = tolken
+    @board[index] = tolken      # logs move
   end
 
 
   def position_taken?(index)      # creates #position_taken?
-  # if position has "X" or "O" => true : false
-  @board[index] == "X" || @board[index] == "O" ? true : false
+  @board[index] == "X" || @board[index] == "O" ? true : false     # if position has "X" or "O" => true : false
   end
 
 
   def valid_move?(position)     # creates #valid_move? and takes a position
-    # if position is not taken and between 0 - 8 ? true : false
-    position_taken?(position) == false && position.between?(0, 8) ? true : false
+    position_taken?(position) == false && position.between?(0, 8) ? true : false      # if position is not taken and between 0 - 8 ? true : false
   end
 
 
@@ -66,24 +59,19 @@ class TicTacToe
 
 
   def turn_count      # creates #turn_count
-    # sets counter
-    count = 0
-    # loops through each element in @board array
-    @board.each do | space |
-      # if it is not empty add one to the counter
-      if space != " "
+    count = 0     # sets counter
+    @board.each do | space |      # loops through each element in @board array
+      if space != " "     # if it is not empty add one to the counter
         count += 1
       end
     end
-    # return the count
-    return count
+    return count      # return the count
 
   end
 
 
   def current_player      # creats current_player method
-    # uses turn_count to see if "X" or "O" turn
-    turn_count % 2 == 0 ? "X" : "O"
+    turn_count % 2 == 0 ? "X" : "O"     # uses turn_count to see if "X" or "O" turn
   end
 
 
@@ -116,7 +104,10 @@ class TicTacToe
     draw? == true || won? != false      # checks if there was a win or draw
   end
 
-  # creates #winner
+  def winner
+    win? != false ? 
+  end# creates #winner
+  
   # => "X" or "O" if there is a winner
 
   # creates #play (the main function)
