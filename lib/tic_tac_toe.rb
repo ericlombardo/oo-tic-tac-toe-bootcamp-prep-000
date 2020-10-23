@@ -53,21 +53,16 @@ class TicTacToe
 
   # creates #turn to include protical for one full move
   def turn
-    puts "Please enter spot 1-9"
-    user_input = gets.chomp
-    user_index = input_to_index(user_input)
-    if valid_move?(user_index) == true
+    puts "Please enter spot 1-9"             # asks user for move between 1 - 9
+    user_input = gets.chomp                  # Receives input
+    user_index = input_to_index(user_input)  # Translate input into index value
+    if valid_move?(user_index) == true       # If move valid, make move, display board 
       move(user_index, current_player)
       display_board
-    else
+    else                                     # if move invalid ? run turn again until valid_move 
       turn
     end
   end
-  # asks user for move between 1 - 9
-  # Receives input
-  # Translate input into index value
-  # If move valid, make move, display board
-  # if move invalid ? run turn again until valid_move
 
   # creates #turn_count
   def turn_count
@@ -98,6 +93,9 @@ class TicTacToe
   # checks to see if all in @board are "X" or "O"
 
   # creates #draw?
+  def draw?
+    
+  end
   # board == full && win == false ? true : false
 
   # creates #over?
