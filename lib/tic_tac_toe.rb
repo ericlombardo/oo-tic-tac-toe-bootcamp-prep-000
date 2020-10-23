@@ -109,7 +109,7 @@ class TicTacToe     # creates class for TicTacToe
       winner_winner = won?      # create variable to hold winning array
       return @board[winner_winner[0]]     #return what is in one of the arrays
     end
-  end# creates #winner
+  end
 
   # => "X" or "O" if there is a winner
 
