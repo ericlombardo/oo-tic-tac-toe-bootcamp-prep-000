@@ -3,7 +3,7 @@ class TicTacToe     # creates class for TicTacToe
     @board = Array.new(9, " ")      # assigns new empty array @board variable
   end
 
-  
+
   WIN_COMBINATIONS = [      # creates a constand WIN_COMBINATIONS and assigns array of winning combinations
     [0, 1, 2],
     [3, 4, 5],
@@ -15,7 +15,7 @@ class TicTacToe     # creates class for TicTacToe
     [2, 4, 6]
   ]
 
-  
+
   def display_board     # creates #display_board and prints current board based on @board array
     puts " #{@board[0]} | #{@board[1]} | #{@board[2]} "
     puts "-----------"
@@ -24,7 +24,7 @@ class TicTacToe     # creates class for TicTacToe
     puts " #{@board[6]} | #{@board[7]} | #{@board[8]} "
   end
 
-  
+
   def input_to_index(input)     # creates #input_to_index that takes user input
     index = input.to_i - 1      # changes string to integer and subtracts 1 to make zero indexed
   end
@@ -107,7 +107,7 @@ class TicTacToe     # creates class for TicTacToe
   def winner
     win? != false ? 
   end# creates #winner
-  
+
   # => "X" or "O" if there is a winner
 
   # creates #play (the main function)
