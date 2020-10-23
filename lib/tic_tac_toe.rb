@@ -107,7 +107,7 @@ class TicTacToe     # creates class for TicTacToe
   def winner
     if won? != false    # checks if win has occured
       winner_winner = won?      # create variable to hold winning array
-      return winner_winner[0]     #return what is in one of the arrays
+      return @board[winner_winner[0]]     #return what is in one of the arrays
     end
   end# creates #winner
 
