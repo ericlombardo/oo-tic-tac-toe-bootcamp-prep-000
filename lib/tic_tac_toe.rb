@@ -56,12 +56,6 @@ class TicTacToe
     puts "Please enter spot 1-9"
     user_input = gets.chomp
     user_index = input_to_index(user_input)
-    if valid_move?(position) == true
-      move(position, current_player)
-      display_board
-    else
-      turn(position)
-    end
   end
   # asks user for move between 1 - 9
   # Receives input
