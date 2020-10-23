@@ -105,7 +105,7 @@ class TicTacToe     # creates class for TicTacToe
   end
 
   def winner
-    win? != false ? !(current_player) : false
+    win? != false ? won?[0] : false
   end# creates #winner
 
   # => "X" or "O" if there is a winner
